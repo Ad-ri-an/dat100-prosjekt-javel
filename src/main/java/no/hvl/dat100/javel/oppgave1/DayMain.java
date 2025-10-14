@@ -15,7 +15,33 @@ public class DayMain {
         System.out.println("OPPGAVE 1");
         System.out.println("==============");
         System.out.println();
+        System.out.println("a)");
+        DailyPower.printPowerPrices(powerprices_day);
+        System.out.println();
+        System.out.println("b)");
+        DailyPower.printPowerUsage(powerusage_day);
+        System.out.println();
+        System.out.println("c)");
+        DailyPower.computePowerUsage(powerusage_day);
+        System.out.println();
+        System.out.println("d)");
+        DailyPower.computeSpotPrice(powerusage_day,powerprices_day);
+        System.out.println();
+        System.out.println("e)");
 
+        System.out.println();
+        System.out.println("f)");
+
+        System.out.println();
+        System.out.println("g)");
+
+        System.out.println();
+        System.out.println("h)");
+
+        System.out.println();
+        System.out.println("i)");
+
+        System.out.println();
         /*
         TODO
 
