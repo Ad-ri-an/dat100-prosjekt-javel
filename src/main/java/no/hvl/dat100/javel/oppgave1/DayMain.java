@@ -27,10 +27,7 @@ public class DayMain {
         System.out.println("d)");
         DailyPower.computeSpotPrice(powerusage_day,powerprices_day);
         System.out.println();
-        System.out.println("e)");
-        //kan ikke hente den og skrive ut noe siden den er privat.
-        System.out.println();
-        System.out.println("f)");
+        System.out.println("e) og f)");
         DailyPower.computePowerSupport(powerusage_day,powerprices_day);
         System.out.println();
         System.out.println("g)");
