@@ -28,7 +28,7 @@ public class DayMain {
         DailyPower.computeSpotPrice(powerusage_day,powerprices_day);
         System.out.println();
         System.out.println("e)");
-
+        //kan ikke hente den og skrive ut noe siden den er privat.
         System.out.println();
         System.out.println("f)");
         DailyPower.computePowerSupport(powerusage_day,powerprices_day);
@@ -37,18 +37,10 @@ public class DayMain {
         DailyPower.computeNorgesPrice(powerusage_day);
         System.out.println();
         System.out.println("h)");
-
+        DailyPower.findPeakUsage(powerusage_day);
         System.out.println();
         System.out.println("i)");
-
+        DailyPower.findAvgPower(powerusage_day);
         System.out.println();
-        /*
-        TODO
-
-         Write code that tests the methods you implement in the DailyPower class
-         Remember to teste the methods as you implement them
-         Remember to also to check that you get the expected results
-         */
-
     }
 }
