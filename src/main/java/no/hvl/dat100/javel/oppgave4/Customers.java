@@ -9,8 +9,7 @@ public class Customers {
     // a) Complete constructor
     public Customers(int size) {
 
-        // TODO
-
+        customers = new Customer[size];
     }
 
     // b) count number of non-null references
@@ -18,9 +17,10 @@ public class Customers {
 
 
         int count = 0;
-
-        // TODO
-
+        for (Customer c : customers){
+            if (c != null) count++;
+        }
+        System.out.println("Antall kunder registret: " + count);
         return count;
     }
 
@@ -29,9 +29,12 @@ public class Customers {
 
         boolean funnet = false;
         Customer c = null;
-
-        // TODO
-
+        for (Customer customer : customers){
+            if (customer != null && customer.getCustomer_id() == customer_id){
+                c = customer;
+                break;
+            }
+        }
         return c;
     }
 
@@ -39,9 +42,13 @@ public class Customers {
     public boolean addCustomer(Customer c) {
 
         boolean inserted = false;
-
-        // TODO
-
+        for (int i = 0; i < customers.length; i++){
+            if (customers[i] == null){
+                customers[i] = c;
+                inserted = true;
+                break;
+            }
+        }
         return inserted;
     }
 
@@ -50,19 +57,28 @@ public class Customers {
 
         boolean deleted = false;
         Customer c = null;
-
-        // TODO
-
+        for (int i = 0; i < customers.length && !deleted; i++) {
+            if (customers[i] != null && customers[i].getCustomer_id() == customer_id) {
+                c = customers[i];
+                customers[i] = null;
+                deleted = true;
+            }
+        }
         return c;
     }
 
     // f) return reference table with all customers
     public Customer[] getCustomers() {
 
-        Customer[] customers = null;
-
-        // TODO
-
-        return customers;
+        int count = countNonNull();
+        Customer[] customersC = new Customer[count];
+        int j = 0;
+        for (int i = 0; i < customers.length; i++){
+            if (customers[i] != null) {
+                customersC[j] = customers[i];
+                j++;
+            }
+        }
+        return customersC;
     }
 }
