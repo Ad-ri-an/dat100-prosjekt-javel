@@ -27,7 +27,7 @@ public class CustomerMain {
         System.out.println("TEST3: ");
         kunde.setName("Austefjord");
         kunde.setEmail("Adrian.Austefjord@gmail.com");
-        kunde.setCustomer_id(1001);
+        kunde.setCustomer_id(9999);
         kunde.setPowerAgreement(PowerAgreementType.NORGESPRICE);
         System.out.println(kunde);
     }

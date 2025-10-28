@@ -36,8 +36,6 @@ public class MonthlyPower {
                 sum += usage[i][j];
             }
         }
-        System.out.printf("Total strømforbruk for måneden: %.2f kWh", sum);
-        System.out.println();
         return sum;
     }
 
@@ -71,7 +69,6 @@ public class MonthlyPower {
                 price += usage[i][j] * prices[i][j];
             }
         }
-        System.out.printf("Strømpris for en måned: %.2f NOK %n", price);
         return price;
     }
 
@@ -90,7 +87,6 @@ public class MonthlyPower {
                 }
             }
         }
-        System.out.printf("Total strømstøtte: %.2f NOK %n", support);
         return support;
     }
 
@@ -104,7 +100,6 @@ public class MonthlyPower {
                 price += j * NORGESPRIS_KWH;
             }
         }
-        System.out.printf("Total pris med Norgespris: %.2f NOK%n", price);
         return price;
     }
 }
